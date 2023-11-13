@@ -17,7 +17,7 @@ def random_operator():
     Choose one arithmetic operator for calculate
 
     :return: The random arithmetic operator
-    :rtype: float
+    :rtype: String
 
     """
     return random.choice(['+', '-', '*'])
@@ -31,7 +31,7 @@ def func_num_operator(num_1, num_2, calcul_oper):
     :param func_name: The name of create function
     :type func_name: string
 
-    :retrun: The name of create function and The calculated result of function
+    :return: The name of create function and The calculated result of function
     :rtype: string, int
 
     """
@@ -64,7 +64,7 @@ def math_quiz():
     :type num_2: int
 
     :param operator: choose one operator for calculate
-    :type operator: float
+    :type operator: string
 
     :param problem: The name of random create function
     :type problem: string
@@ -72,15 +72,14 @@ def math_quiz():
     :param correct_ans: The correct answer of problem
     :type correct_ans: int
 
-    :unser_Ans: in terminal input
+    :user_ans: in terminal input
 
-    :if unser_Ans is correct,
+    :if user_Ans is correct,
      score += 1 : score will be counted +1 according to correct mathquiz
      if not,
      go exception.
 
     """
-
 
     score = 0
     total_quiz = 5
@@ -95,10 +94,10 @@ def math_quiz():
 
         problem, correct_ans = func_num_operator(num_1, num_2, operator)
         print(f"\nQuestion: {problem}")
-        user_Ans = input("Your answer: ")
-        user_Ans = int(user_Ans)
+        user_ans = input("Your answer: ")
+        user_ans = int(user_ans)
 
-        if user_Ans == correct_ans:
+        if user_ans == correct_ans:
             print("Correct! You earned a point.")
             score += 1
         else:
